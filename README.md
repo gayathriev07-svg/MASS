@@ -8,12 +8,13 @@
 
 ## 📌 Team Information
 
-- **Team Name:**  
+- **Team Name:**
+- MASS 
 - **Team Members:**  
-  - Member 1 – Register No  
-  - Member 2 – Register No  
-  - Member 3 – Register No  
-  - Member 4 – Register No (if applicable)
+  - Member 1 – NSS24EC050 
+  - Member 2 – NSS24EC055 
+  - Member 3 – NSS24EC057
+  - Member 4 – NSS24EC066
 
 - **Problem Domain:**  
 - **Selected Problem Statement:**  
@@ -23,6 +24,7 @@
 ## 🧩 Problem Description
 
 Briefly describe the problem you are addressing.  
+- Students often choose academic paths or careers without clear understanding of industry demands,required skill sets,or their own competency gaps.This disconnect between education choices and real-world expectations results in skill mismatch and employability challenges for graduates.
 Explain the background and why this problem is relevant.
 
 ---
