@@ -11,10 +11,10 @@
 - **Team Name:**
 - MASS 
 - **Team Members:**  
-  - Member 1 – NSS24EC050 
-  - Member 2 – NSS24EC055 
-  - Member 3 – NSS24EC057
-  - Member 4 – NSS24EC066
+  - Member 1 – NSS24EC050  DEESHNA P K
+  - Member 2 – NSS24EC055  DIYA V S 
+  - Member 3 – NSS24EC057  ESSABELLA C JOSE
+  - Member 4 – NSS24EC066  GAYATHRI E V
 
 - **Problem Domain:**  
 - **Selected Problem Statement:**  
