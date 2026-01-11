@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Career Analysis Results</title>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins','Segoe UI',sans-serif;
+}
+
+body{
+    background:#eaf3ff;
+    min-height:100vh;
+}
+
+/* ===== Layout ===== */
+.container{
+    display:grid;
+    grid-template-columns:240px 1fr;
+    gap:20px;
+    padding:20px;
+}
+
+/* ===== Sidebar (Dashboard) ===== */
+.sidebar{
+    background:#d9e9ff;
+    border-radius:14px;
+    padding:20px;
+    height:fit-content; /* only as tall as content */
+}
+
+.menu-title{
+    font-size:20px;
+    margin-bottom:20px;
+    color:#3b5ccc;
+}
+
+.menu-item{
+    padding:14px 10px;
+    margin-bottom:8px;
+    border-radius:8px;
+    cursor:pointer;
+    color:#2f4f7f;
+}
+
+.menu-item:hover{
+    background:#c6dcff;
+}
+
+/* ===== Right Section Cards ===== */
+.right-section{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+/* ===== Cards ===== */
+.card{
+    background:#f7fbff;
+    border-radius:14px;
+    padding:20px;
+}
+
+.card h3{
+    margin-bottom:12px;
+    color:#4a6fdc;
+}
+
+/* ===== Summary ===== */
+.summary p{
+    color:#4b5d7a;
+    line-height:1.6;
+    font-size:15px;
+}
+
+/* ===== BAR GRAPH ===== */
+.bar-graph{
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-around;
+    height:220px;
+    margin-top:20px;
+}
+
+.bar-item{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    width:60px;
+}
+
+.bar{
+    width:40px;
+    background:linear-gradient(to top,#6a7df2,#9fb5ff);
+    border-radius:6px;
+    position:relative;
+}
+
+.bar span{
+    position:absolute;
+    top:-22px;
+    width:100%;
+    text-align:center;
+    font-size:12px;
+    color:#2f4f7f;
+    font-weight:600;
+}
+
+.bar-item p{
+    margin-top:10px;
+    font-size:13px;
+    color:#2f4f7f;
+    text-align:center;
+}
+
+/* ===== Tables ===== */
+.stock-table,
+.jobs-table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:14px;
+}
+
+.stock-table td,
+.jobs-table td{
+    padding:8px;
+    color:#2f4f7f;
+}
+
+.up{color:#2ea44f;}
+.down{color:#d73a49;}
+.neutral{color:#6b7280;}
+
+.badge{
+    padding:4px 10px;
+    border-radius:12px;
+    font-size:12px;
+    background:#dbe7ff;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ===== DASHBOARD SIDEBAR ===== -->
+    <div class="sidebar">
+        <div class="menu-title">☰ Dashboard</div>
+        <a class="menu-item" href="index1.html">Homepage</a>
+        <a class="menu-item" href="explore career.html">Explore Careers</a>
+        <a class="menu-item" href="soft_skills.html">Soft Skills</a>
+        <a class="menu-item" href="Degree_vs_demand.html">Degree vs Demand</a>
+        <a class="menu-item" href="review.html">Review</a>
+    </div>
+
+    <!-- ===== RIGHT SECTION ===== -->
+    <div class="right-section">
+
+        <!-- ===== SUMMARY ===== -->
+        <div class="card summary">
+            <h3>Summary</h3>
+            <p>
+                This career analysis highlights your natural aptitude, technical strengths,
+                and growth areas. The assessment maps your skill profile against industry
+                demand to help you identify suitable career paths.
+            </p>
+        </div>
+
+        <!-- ===== BAR GRAPH ===== -->
+        <div class="card">
+            <h3>Skill Strength (%)</h3>
+            <div class="bar-graph">
+                <div class="bar-item">
+                    <div class="bar" style="height:85%">
+                        <span>85%</span>
+                    </div>
+                    <p>Creative</p>
+                </div>
+                <div class="bar-item">
+                    <div class="bar" style="height:72%">
+                        <span>72%</span>
+                    </div>
+                    <p>Social</p>
+                </div>
+                <div class="bar-item">
+                    <div class="bar" style="height:65%">
+                        <span>65%</span>
+                    </div>
+                    <p>Technical</p>
+                </div>
+                <div class="bar-item">
+                    <div class="bar" style="height:90%">
+                        <span>90%</span>
+                    </div>
+                    <p>Management</p>
+                </div>
+                <div class="bar-item">
+                    <div class="bar" style="height:78%">
+                        <span>78%</span>
+                    </div>
+                    <p>Analytical</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== STOCK CHART ===== -->
+        <div class="card">
+            <h3>Your Degree is an Investment — Track its Returns</h3>
+            <canvas id="skillStockChart" height="220"></canvas>
+        </div>
+
+        <!-- ===== JOBS ===== -->
+        <div class="card">
+            <h3>Top Jobs for You</h3>
+            <table class="jobs-table">
+                <tr><td>Data Analyst</td><td>87%</td><td><span class="badge">📈 Strong</span></td></tr>
+                <tr><td>Product Manager</td><td>81%</td><td><span class="badge">📈 Improving</span></td></tr>
+                <tr><td>UX Researcher</td><td>76%</td><td><span class="badge">📊 Stable</span></td></tr>
+                <tr><td>Embedded Engineer</td><td>62%</td><td><span class="badge">📉 Needs Skills</span></td></tr>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+<!-- ===== CHART SCRIPT ===== -->
+<script>
+new Chart(document.getElementById('skillStockChart'),{
+    type:'line',
+    data:{
+        labels:['Test 1','Test 2','Test 3','Test 4','Current'],
+        datasets:[
+            {label:'Creative',data:[55,60,68,75,85],borderColor:'#6a7df2',tension:0.4},
+            {label:'Social',data:[50,55,60,68,72],borderColor:'#8b9cff',tension:0.4},
+            {label:'Technical',data:[52,56,60,63,65],borderColor:'#e55353',tension:0.4},
+            {label:'Management',data:[60,65,72,82,90],borderColor:'#f5a623',tension:0.4},
+            {label:'Analytical',data:[58,62,66,72,78],borderColor:'#34a853',tension:0.4}
+        ]
+    },
+    options:{
+        responsive:true,
+        scales:{
+            y:{min:40,max:100}
+        }
+    }
+});
+    </script>
+    <script src="aiBot.js" defer></script>
+
+</body>
+</html>

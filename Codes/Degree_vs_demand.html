@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Degree VS Demand</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  height: 100vh;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* TOP NAVIGATION */
+.navbar {
+  background: linear-gradient(90deg, #1a1a2e, #16213e);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+}
+
+.navbar .nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.navbar .nav-links li {
+  margin-left: 2rem;
+}
+
+.navbar .nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+  color: #ff6b6b;
+}
+
+/* MAIN CONTENT */
+.main {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #343a40;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.subtitle {
+  max-width: 900px;
+  line-height: 1.6;
+  color: #6c757d;
+  font-style: italic;
+  margin-bottom: 50px;
+}
+
+/* BUBBLES */
+.bubble-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+}
+
+.bubble {
+  width: 220px;
+  height: 220px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 25px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  cursor: pointer;
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.bubble:hover {
+  background: #ff6b6b;
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.3);
+}
+
+.bubble p {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.myth {
+  color: #343a40;
+}
+
+.reality {
+  color: white;
+  opacity: 0;
+  position: absolute;
+  padding: 20px;
+}
+
+.bubble:hover .myth {
+  opacity: 0;
+}
+
+.bubble:hover .reality {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .navbar .nav-links {
+    display: none;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  .bubble-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP NAVIGATION -->
+<nav class="navbar">
+  <div class="logo">Career Clarity</div>
+  <ul class="nav-links">
+    <li><a href="index1.html">Homepage</a></li>
+    <li><a href="explore career.html">Explore Careers</a></li>
+    <li><a href="Degree_vs_demand.html">Degree vs Demand</a></li>
+    <li><a href="review.html">Review</a></li>
+    <li><a href="soft_skills.html">Soft Skills</a></li>
+  </ul>
+</nav>
+
+<!-- MAIN CONTENT -->
+<div class="main">
+
+<h1>Degree VS Demand</h1>
+<p class="subtitle">
+Many students believe degrees alone define success.  
+Hover over each bubble to uncover the reality behind popular career myths.
+</p>
+
+<div class="bubble-grid">
+
+  <div class="bubble">
+    <p class="myth">A Degree Guarantees a Job</p>
+    <p class="reality">Skills, internships, and adaptability matter more than the degree title.</p>
+  </div>
+
+  <div class="bubble">
+    <p class="myth">Engineering Is the Only Safe Career</p>
+    <p class="reality">Healthcare, data, design, business, and creative fields are booming.</p>
+  </div>
+
+  <div class="bubble">
+    <p class="myth">High Marks Ensure Success</p>
+    <p class="reality">Employers value problem-solving and communication over marks.</p>
+  </div>
+
+  <div class="bubble">
+    <p class="myth">Arts Have No Scope</p>
+    <p class="reality">UX, media, branding, animation, and content rely on arts.</p>
+  </div>
+
+  <div class="bubble">
+    <p class="myth">One Degree = One Career</p>
+    <p class="reality">People switch careers through upskilling and experience.</p>
+  </div>
+
+  <div class="bubble">
+    <p class="myth">Demand Never Changes</p>
+    <p class="reality">Technology and global trends constantly reshape careers.</p>
+  </div>
+
+  <div class="bubble">
+    <p class="myth">Skills Can Be Learned Later</p>
+    <p class="reality">Early skill-building creates better opportunities.</p>
+  </div>
+
+  <div class="bubble">
+    <p class="myth">Degree > Skills</p>
+    <p class="reality">Degrees open doors; skills decide growth.</p>
+  </div>
+
+</div>
+
+</div>
+
+<script>
+  </script>
+  <script src="aiBot.js" defer></script>
+
+  <script src="aiParticles.js" defer></script>
+
+</body>
+</html>
+
+

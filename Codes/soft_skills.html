@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Soft Skills</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  height: 100vh;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* TOP NAVIGATION */
+.navbar {
+  background: linear-gradient(90deg, #1a1a2e, #16213e);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+}
+
+.navbar .nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.navbar .nav-links li {
+  margin-left: 2rem;
+}
+
+.navbar .nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+  color: #ff6b6b;
+}
+
+/* MAIN */
+.main {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+/* INTRO */
+.intro {
+  max-width: 900px;
+  margin-bottom: 50px;
+}
+.intro h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #343a40;
+  line-height: 1.2;
+}
+.intro p {
+  color: #6c757d;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+/* SKILL GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 600;
+  color: #343a40;
+}
+.card:hover {
+  transform: translateY(-8px);
+  background: #ff6b6b;
+  color: white;
+  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.3);
+}
+
+/* DETAIL PAGE */
+.detail {
+  display: none;
+  max-width: 900px;
+}
+.detail h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #343a40;
+}
+.detail section {
+  margin-bottom: 30px;
+}
+.detail ul {
+  margin-left: 20px;
+  color: #495057;
+}
+.detail a {
+  color: #ff6b6b;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.detail a:hover {
+  color: #ffa500;
+}
+.back {
+  margin-bottom: 20px;
+  cursor: pointer;
+  color: #ff6b6b;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+.back:hover {
+  color: #ffa500;
+}
+
+@media (max-width: 768px) {
+  .navbar .nav-links {
+    display: none;
+  }
+  .intro h1 {
+    font-size: 2.5rem;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP NAVIGATION -->
+<nav class="navbar">
+  <div class="logo">Career Clarity</div>
+  <ul class="nav-links">
+    <li><a href="index1.html">Homepage</a></li>
+    <li><a href="explore career.html">Explore Careers</a></li>
+    <li><a href="Degree_vs_demand.html">Degree vs Demand</a></li>
+    <li><a href="review.html">Review</a></li>
+    <li><a href="soft_skills.html">Soft Skills</a></li>
+  </ul>
+</nav>
+
+<div class="main">
+
+<!-- MAIN PAGE -->
+<div id="mainPage">
+  <div class="intro">
+    <h1>Soft Skills</h1>
+    <p>
+      Soft skills are personal attributes that enable individuals to interact
+      effectively and harmoniously with others. In today’s dynamic workplaces,
+      technical knowledge alone is not enough — communication, adaptability,
+      and emotional intelligence define long-term success.
+    </p>
+  </div>
+
+  <div class="grid">
+    <div class="card" onclick="openDetail(0)">Communication Skills</div>
+    <div class="card" onclick="openDetail(1)">Teamwork & Collaboration</div>
+    <div class="card" onclick="openDetail(2)">Critical Thinking</div>
+    <div class="card" onclick="openDetail(3)">Time Management</div>
+    <div class="card" onclick="openDetail(4)">Adaptability & Flexibility</div>
+    <div class="card" onclick="openDetail(5)">Emotional Intelligence</div>
+  </div>
+</div>
+
+<!-- DETAIL PAGE -->
+<div id="detailPage" class="detail">
+  <div class="back" onclick="showMain()">← Back to Soft Skills</div>
+  <h2 id="title"></h2>
+
+  <section>
+    <p id="desc"></p>
+  </section>
+
+  <section>
+    <h3>Where is this skill useful?</h3>
+    <ul id="uses"></ul>
+  </section>
+
+  <section>
+    <h3>Recommended Course</h3>
+    <a id="course" target="_blank">View SWAYAM / NPTEL Course</a>
+  </section>
+</div>
+
+</div>
+
+<script>
+const skills=[
+{
+t:"Communication Skills",
+d:"Communication skills enable clear expression of ideas and active listening. They help avoid misunderstandings and improve teamwork. Strong communication builds confidence and trust. It is vital in presentations, interviews, and leadership. Every profession relies on it.",
+u:["Presenting ideas","Professional emails","Client interaction","Team discussions"],
+c:"https://onlinecourses.swayam2.ac.in/nou21_lb11/preview"
+},
+{
+t:"Teamwork & Collaboration",
+d:"Teamwork involves working effectively with others toward a common goal. It encourages respect for diverse opinions. Collaboration boosts productivity and creativity. Employers value team players. It improves workplace harmony.",
+u:["Group projects","Corporate teams","Startup environments","Research work"],
+c:"https://onlinecourses.swayam2.ac.in/imb25_mg174/preview"
+},
+{
+t:"Critical Thinking",
+d:"Critical thinking helps analyze situations logically. It supports informed decision-making. This skill improves problem solving. It reduces errors and bias. Essential for leadership roles.",
+u:["Decision making","Problem solving","Strategic planning","Risk analysis"],
+c:"https://onlinecourses.swayam2.ac.in/aic19_ma06/preview"
+},
+{
+t:"Time Management",
+d:"Time management is the ability to plan and control time. It improves efficiency and reduces stress. Helps meet deadlines. Increases productivity. Essential in fast-paced roles.",
+u:["Meeting deadlines","Balancing tasks","Exam preparation","Work scheduling"],
+c:"https://onlinecourses.nptel.ac.in/noc26_hs54/preview"
+},
+{
+t:"Adaptability & Flexibility",
+d:"Adaptability helps adjust to change. It supports continuous learning. Employers seek flexible professionals. Helps survive evolving industries. Encourages growth mindset.",
+u:["Technology changes","Role transitions","New environments","Remote work"],
+c:"https://onlinecourses.swayam2.ac.in/imb25_mg174/preview"
+},
+{
+t:"Emotional Intelligence",
+d:"Emotional intelligence is understanding emotions. It improves relationships. Helps manage stress and conflict. Essential for leadership. Builds empathy and trust.",
+u:["Leadership roles","Conflict resolution","Customer handling","Team motivation"],
+c:"https://onlinecourses.nptel.ac.in/noc21_hs02/preview"
+}
+];
+
+function openDetail(i){
+  mainPage.style.display="none";
+  detailPage.style.display="block";
+  title.innerText=skills[i].t;
+  desc.innerText=skills[i].d;
+  uses.innerHTML="";
+  skills[i].u.forEach(x=>uses.innerHTML+=`<li>${x}</li>`);
+  course.href=skills[i].c;
+}
+
+function showMain(){
+  detailPage.style.display="none";
+  mainPage.style.display="block";
+}
+</script>
+<script src="aiBot.js" defer></script>
+<script src="aiParticles.js" defer></script>
+
+</body>
+</html>

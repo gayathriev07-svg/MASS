@@ -1,0 +1,40 @@
+<div id="aiAssistant" style="position:fixed;bottom:20px;right:20px;z-index:1000;">
+  <button id="openBot" style="background:#0b5ed7;color:white;padding:12px;border:none;border-radius:50%;cursor:pointer;">💬</button>
+  <div id="chatBox" style="display:none;width:300px;height:400px;background:white;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.2);overflow:hidden;flex-direction:column;">
+    <div id="chatMessages" style="flex:1;padding:10px;overflow-y:auto;"></div>
+    <input type="text" id="userInput" placeholder="Type..." style="width:100%;padding:10px;border:none;border-top:1px solid #ccc;">
+  </div>
+</div>
+
+<script>
+const openBot = document.getElementById("openBot");
+const chatBox = document.getElementById("chatBox");
+const chatMessages = document.getElementById("chatMessages");
+const userInput = document.getElementById("userInput");
+
+openBot.onclick = () => {
+  chatBox.style.display = chatBox.style.display === "none" ? "flex" : "none";
+};
+
+// Send message
+userInput.addEventListener("keypress", async (e) => {
+  if(e.key === "Enter" && userInput.value.trim() !== ""){
+    const msg = userInput.value;
+    chatMessages.innerHTML += `<div><b>You:</b> ${msg}</div>`;
+    userInput.value = "";
+
+    try {
+      const res = await fetch("http://localhost:3000/chat", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({ message: msg })
+      });
+      const data = await res.json();
+      chatMessages.innerHTML += `<div><b>Bot:</b> ${data.reply}</div>`;
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    } catch (err) {
+      chatMessages.innerHTML += `<div><b>Bot:</b> Sorry, something went wrong.</div>`;
+    }
+  }
+});
+</script>
