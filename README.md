@@ -58,10 +58,15 @@ Example:
 
 ## 🖥️ Implementation Details
 
-Explain how your project works:
-- Overall workflow
-- Key features implemented
-- Any challenges faced and how you solved them
+Overall workflow:
+The platform begins by collecting basic user inputs such as academic background, interests, and career preferences. Based on this information, it maps suitable career paths and displays the corresponding industry-required skills. The system then compares these requirements with the user’s current skill set to identify gaps and recommends relevant learning resources and nearby job or internship opportunities.
+Key features implemented:
+Career path exploration aligned with current industry demands
+Skill-gap analysis based on user inputs
+Real-time display of nearby job and internship opportunities with direct links
+User-friendly dashboard for clear visualisation of career options and progress
+Challenges faced and how they were solved:
+One major challenge was presenting complex career and skill data in a simple and understandable manner. This was addressed by using structured workflows and clear visual sections. Another challenge was ensuring the relevance of opportunities shown; this was handled by filtering and categorising job data based on location and skill requirements.
 
 ---
 
