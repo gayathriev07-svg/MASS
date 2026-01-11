@@ -17,7 +17,7 @@
   - Member 4 – NSS24EC066  GAYATHRI E V
 
 - **Problem Domain:**
-- 
+-  EDUCATION TECHNOLOGY - career guidance and employability
 - **Selected Problem Statement:**  
 -   Students often choose academic paths or careers without a clear understanding of industry demands, required skill sets, or their own competency gaps. This disconnect between education choices and real-world expectations results in skill mismatch and employability challenges for graduates.
 ---
@@ -72,7 +72,24 @@ One major challenge was presenting complex career and skill data in a simple and
 
 ## 📂 Project Structure
 
-
+1. User Interface (Front-end):
+Dashboard for students to input academic background, interests, and career preferences
+Career path visualization
+Skill gap analysis display
+Job/internship opportunities section with links
+2. Backend (Server & Logic):
+Data processing and career mapping algorithms
+Skill gap calculation based on user profile vs industry requirements
+Job/internship data fetching and filtering
+3. Database:
+Stores student profiles, skill sets, career paths, and industry data
+Keeps updated job/internship listings
+4. Integration & APIs:
+Real-time job/internship data integration
+External learning resources and upskilling links
+5. Optional Analytics Module:
+Tracks user engagement
+Provides insights on popular career paths, common skill gaps, and trends
 ---
 
 ## 🧪 Screenshots / Demo
