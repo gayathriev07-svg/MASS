@@ -1,4 +1,4 @@
-# 🧑‍💻 Code of Duty – Hackathon Submission
+<img width="1855" height="926" alt="Screenshot 2026-01-11 080557" src="https://github.com/user-attachments/assets/9c0cb51c-e2d0-4aff-b3d4-54988d6fda11" /># 🧑‍💻 Code of Duty – Hackathon Submission
 
 > **Instructions:**  
 > Please edit this README by filling in the required details.  
@@ -97,12 +97,21 @@ Provides insights on popular career paths, common skill gaps, and trends
 Add screenshots of your website or application inside the `screenshots/` folder.
 
 Mention them here:
-- Screenshot 1 – Description  
-- Screenshot 2 – Description  
-
-*(Screenshots are mandatory for evaluation)*
-
----
+- Screenshot 2026-01-11 075713 – HOMEPAGE 
+- Screenshot 2026-01-11 075825 – Aptitude test question example  
+- Screenshot 2026-01-11 075901 - AI chatbot
+- Screenshot 2026-01-11 080127 - Barchart showing user's skill levels
+- Screenshot 2026-01-11 080156 - Graph displaying the user's aptitude
+- Screenshot 2026-01-11 080221 - Top career matches and suggested jobs
+- Screenshot 2026-01-11 080246 - Live location-based job opportunities
+- Screenshot 2026-01-11 080336 - EXPLORE CAREER tab
+- Screenshot 2026-01-11 080356 - contents of a sample field
+- Screenshot 2026-01-11 080424 - DEGREE VS DEMAND tab
+- Screenshot 2026-01-11 080448 - showing a real fact over a myth
+- Screenshot 2026-01-11 080533 - REVIEW tab
+- Screenshot 2026-01-11 080557 - posting a user review
+- Screenshot 2026-01-11 080619 - SOFTSKILLS tab
+- Screenshot 2026-01-11 080634 - contents of a sample softskill 
 
 
 
